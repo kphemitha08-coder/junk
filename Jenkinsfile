@@ -11,13 +11,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                bat 'java Hello World'
+                bat 'java HelloWorld'
             }
         }
 
         stage('Archive') {
             steps {
-archive Artifacts artifacts: '*.class', fingerprint: true
+archiveArtifacts artifacts: '*.class', fingerprint: true
             }
         }
     }
